@@ -10,6 +10,6 @@ COPY requirements.txt /app/
 RUN pip install --upgrade pip && pip install -r requirements.txt
 # Copy the Django project to the container
 COPY . /app
-WORKDIR /app
+WORKDIR /app/InZone
 RUN python /manage.py migrate
 CMD python manage.py runserver 0.0.0.0:8080
